@@ -180,4 +180,41 @@ async function addEmployee() {
   console.log("Employee added successfully");
   menu();
 }
+
+async function updateEmployeeRole() {
+  const { rows } = await db.query("SELECT * FROM role");
+  const result = await db.query("SELECT * FROM employee");
+  const roles = rows.map((role) => ({ name: role.title, value: role.id }));
+  const employees = result.rows.map((emp) => ({
+    name: emp.first_name + " " + emp.last_name,
+    value: emp.id,
+  }));
+
+  const answers = await prompt([
+    {
+      type: "list",
+      name: "employee",
+      message: "Select an employee to update:",
+      choices: employees,
+    },
+  
+    {
+      type: "list",
+      name: "role_id",
+      message: "Select the new role:",
+      choices: roles,
+    },
+  
+  ]);
+  await db.query(
+    "UPDATE employee SET role_id = $1 WHERE id = $2",
+    [
+      answers.role_id,
+      answers.employee,
+    ]
+  );
+  console.log("Employee role updated successfully");
+  menu();
+}
+
 menu();
