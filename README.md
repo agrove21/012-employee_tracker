@@ -32,11 +32,14 @@ Test the application using jest.
 If you have any questions, you can reach me at [annhargrove21@gmail.com](mailto:annhargrove21@gmail.com). You can also find more of my work at [agrove21](https://github.com/agrove21).
 
 ## Walkthrough Video
-Watch the walkthrough video to see the application in action: [Watch Video](https://app.screencastify.com/v3/watch/neIoe02g8E5jmh6P12EC)
+Watch the walkthrough video to see the application in action: [Watch Video](https://app.screencastify.com/v3/watch/nMRvsIc14Ywicsgp6Z2J)
 
 ## Screenshots
-### Index.js
-<img src="assets/images/index.png" width="800px">
+### View all departments, roles, and employees
+<img src="assets/view all.png" width="800px">
 
-### generateMarkdown.js
-<img src="assets/images/generateMarkdown.png" width="800px">
+### Add a department, role and employee
+<img src="assets/add a.png" width="800px">
+
+### Update an employee role
+<img src="assets/update.png" width="800px">
